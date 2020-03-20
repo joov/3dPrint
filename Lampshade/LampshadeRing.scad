@@ -46,7 +46,7 @@ difference() {
            cylinder(r=overall_width/2+wall_thickness, h=ring_height);
             
         // Foot holes
-            for (a=[0:120:240])rotate([0,0,a])foot_hole(r=overall_width/2, height=ring_height, small_width=wall_thickness/1.2, big_width=foot_width+wall_thickness+0.2, angle=foot_angle+5, flat_depth=foot_height);
+            for (a=[0:120:240])rotate([0,0,a])foot_hole(r=overall_width/2, height=ring_height, small_width=wall_thickness/1.2, big_width=foot_width+wall_thickness+0.2, angle=foot_angle+5, flat_depth=foot_height-wall_thickness/2+0.5);
 
         
         // Lamp mount        
