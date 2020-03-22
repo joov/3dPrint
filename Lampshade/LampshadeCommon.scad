@@ -12,6 +12,12 @@ num_ring_holes=20;
 foot_width=6;
 foot_angle=15;
 
+num_rods=40;
+gap_rods=0; //mm
+
+delta_angle=360/num_rods;
+
+rod_width = overall_width*3.141/num_rods-gap_rods;
 
 foot_height=ring_height-wall_thickness+0.2;
 
