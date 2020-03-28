@@ -17,6 +17,8 @@ gap_rods=0; //mm
 
 delta_angle=360/num_rods;
 
+offset_top=0.1;
+
 rod_width = overall_width*3.141/num_rods-gap_rods;
 
 foot_height=ring_height-wall_thickness+0.2;

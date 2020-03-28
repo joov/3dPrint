@@ -13,7 +13,7 @@ union() {
     }
     
      mat = [[1,0,0,0],
-        [0,1,overall_width/big_ellipse_height+offset_top,0],
+        [0,1,overall_width/small_ellipse_height-0.02,0],
         [0,0,1]];
  
     difference() {
@@ -22,7 +22,7 @@ union() {
     for(a=[0:delta_angle:360])
          rotate([0,0,a])
             multmatrix(m=mat)
-                linear_extrude(height=big_ellipse_height/2, twist=90) 
+                linear_extrude(height=small_ellipse_height/2, twist=90) 
             translate([overall_width/2-wall_thickness/4,0,0])
                 square([wall_thickness/2,rod_width],center=true);
 
@@ -30,6 +30,7 @@ union() {
         
     }
     
+    color([1,0,0])translate([0,0,small_ellipse_height/2+foot_height])cylinder(h=rod_width/2, r2=rod_width/2,r1=0);
 
     
 }
