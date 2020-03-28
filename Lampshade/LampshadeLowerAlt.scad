@@ -12,8 +12,8 @@ union() {
         circle(r=overall_width/2-wall_thickness/2);
     }
     
-     mat = [[1,0,0,0],
-        [0,1,overall_width/small_ellipse_height-0.02,0],
+     mat = [[1,0,-cos(twist_lower_angle)*overall_width/small_ellipse_height,0],
+        [0,1,sin(twist_lower_angle)*overall_width/small_ellipse_height,0],
         [0,0,1]];
  
     difference() {
@@ -22,7 +22,7 @@ union() {
     for(a=[0:delta_angle:360])
          rotate([0,0,a])
             multmatrix(m=mat)
-                linear_extrude(height=small_ellipse_height/2, twist=90) 
+                linear_extrude(height=small_ellipse_height/2, twist=twist_lower_angle) 
             translate([overall_width/2-wall_thickness/4,0,0])
                 square([wall_thickness/2,rod_width],center=true);
 

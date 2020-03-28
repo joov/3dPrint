@@ -19,6 +19,9 @@ delta_angle=360/num_rods;
 
 offset_top=0.1;
 
+twist_lower_angle = 90*(1+small_ellipse_height/big_ellipse_height)/2;
+echo(twist_lower_angle);
+//twist_lower_angle=90;
 rod_width = overall_width*3.141/num_rods-gap_rods;
 
 foot_height=ring_height-wall_thickness+0.2;
@@ -35,6 +38,7 @@ lamp_mount_outer_width=63;
 wall_distance=7;
 
 $fn=num_slices;
+
 
 
 // Hollow half ellipse
