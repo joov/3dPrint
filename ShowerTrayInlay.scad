@@ -24,7 +24,7 @@ module strainer(is_rect) {
 
 
     // in mm
-    width=(is_rect=="yes") ? outer_radius : 2*outer_raduis;
+    width=(is_rect=="yes") ? outer_radius : 2*outer_radius;
    
     
    difference() {

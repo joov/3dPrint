@@ -1,0 +1,1 @@
+rotate([0,0,45])cylinder(79,d1=40/cos(45),d2=20/cos(45),$fn=4);
