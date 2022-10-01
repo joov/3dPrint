@@ -1,4 +1,10 @@
 *.gcode
 *.jpg
+*.png
+*.stl
+*.gz 
+*.rar
+*.zip
+**/cache_fluid
 **/images
 
